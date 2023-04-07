@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    container_name: how_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: how
+      POSTGRES_PASSWORD: how
+      POSTGRES_DB: how_postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
