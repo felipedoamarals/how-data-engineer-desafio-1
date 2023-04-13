@@ -35,11 +35,11 @@ A Solução consiste em conectar via API no Kaggle e realizar a extração dos d
 
 4 - Configure as credenciais do Kaggle. [Mais informações](https://www.kaggle.com/docs/api)
 
-5 - Execute o script de extração `csv_to_postgres.py`.
+5 - Execute o script de extração `download-datasets-kaggle.sh`.
 -   Este conecta via api no kaggle e faz o download do files para o diretório datasets do projeto.
 
 6 - Execute o script de ingestão de dados no postgres `replication_data.py`.
-- Este utiliza-se de uma classe **Database**, essa abstrai as interações com o banco postgres, para realizar a conexão com a base, ler os CSVs e JSONs disponíveis no datasets, faz as tratativas necessárias e os insere no postgres, atribuindo o nome do arquivo ao nome da tabela a criada.
+- Este utiliza-se de uma classe **Database** em **db_utils**, essa abstrai as interações com o banco postgres, para realizar a conexão com a base, ler os CSVs e JSONs disponíveis no datasets, faz as tratativas necessárias e os insere no postgres, atribuindo o nome do arquivo ao nome da tabela a criada.
 
 # Resultado:
 
