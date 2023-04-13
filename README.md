@@ -17,6 +17,26 @@ Envie o link do GitHub com o projeto realizado no canal `desafio-1-março-2023`.
 
 Na próxima aula, pelo menos uma pessoa deve apresentar (explicar) o código utilizado e então vamos discutir juntos para compartilharmos boas práticas.
 
-## Solução Proposta
+## Solução Proposta:
 
-Ainda não há solução proposta.
+![Descrição da imagem](/img/replication_data_how_bootcamp.png)
+
+A Solução consiste em conectar via API no Kaggle e realizar a extração dos datasets solicitados e realizar a ingestão no postgres.
+
+## Como utilizar:
+
+1 - Crie o container do Postgres utilizando o `docker-compose.yml`. 
+- O docker deve tá configurado em sua máquina. [Mais informações](https://docs.docker.com/engine/install/ubuntu/)
+
+2 - Para melhor execução do replication data, crie um ambiente virtual do python utilizando o virtualenv. [Mais informações](https://docs.python.org/pt-br/3/library/venv.html)
+
+3 - Intale os `requirements.txt` usando o pip3:
+ ```pip3 install -r requirements.txt```
+
+4 - Configure as credenciais do Kaggle. [Mais informações](https://www.kaggle.com/docs/api)
+
+5 - Execute o script de extração `csv_to_postgres.py`.
+-   Este conecta via api no kaggle e faz o download do files para o diretório datasets do projeto.
+
+6 - Execute o script de ingestão de dados no postgres `replication_data.py`.
+- Este utiliza-se de uma classe **Database**, essa abstrai as interações com o banco postgres, para realizar a conexão com a base, ler os CSVs e JSONs disponíveis no datasets, faz as tratativas necessárias e os insere no postgres, atribuindo o nome do arquivo ao nome da tabela a criada.
