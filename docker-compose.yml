@@ -6,9 +6,9 @@ services:
     container_name: how_postgres
     restart: always
     environment:
-      POSTGRES_USER: how
-      POSTGRES_PASSWORD: how
-      POSTGRES_DB: how_postgres
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
     volumes:
       - ./data:/var/lib/postgresql/data
     ports:
