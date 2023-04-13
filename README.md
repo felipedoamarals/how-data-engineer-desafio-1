@@ -19,7 +19,7 @@ Na próxima aula, pelo menos uma pessoa deve apresentar (explicar) o código uti
 
 ## Solução Proposta:
 
-![Descrição da imagem](/img/replication_data_how_bootcamp.png)
+![Solução Proposta](/img/replication_data_how_bootcamp.png)
 
 A Solução consiste em conectar via API no Kaggle e realizar a extração dos datasets solicitados e realizar a ingestão no postgres.
 
@@ -40,3 +40,7 @@ A Solução consiste em conectar via API no Kaggle e realizar a extração dos d
 
 6 - Execute o script de ingestão de dados no postgres `replication_data.py`.
 - Este utiliza-se de uma classe **Database**, essa abstrai as interações com o banco postgres, para realizar a conexão com a base, ler os CSVs e JSONs disponíveis no datasets, faz as tratativas necessárias e os insere no postgres, atribuindo o nome do arquivo ao nome da tabela a criada.
+
+# Resultado:
+
+![Resultado](/img/postgres_how.png)
